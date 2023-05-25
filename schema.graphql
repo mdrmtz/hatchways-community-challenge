@@ -1,52 +1,59 @@
-
-  enum Profession {
+enum Profession {
     CNA
     LVN
     RN
-  }
+}
 
-  type Worker {
+type Worker {
     id: ID!
     name: String!
     isActive: Boolean!
     profession: Profession!
     documents: [Document!]!
-  }
+}
 
-  type Facility {
+type Facility {
     id: ID!
     name: String!
     isActive: Boolean!
-  }
+}
 
-  type Document {
+type Document {
     id: ID!
     name: String!
     isActive: Boolean!
-  }
+}
 
-  type FacilityRequirement {
+type FacilityRequirement {
     id: ID!
     facility: Facility!
     document: Document!
-  }
+}
 
-  type DocumentWorker {
+type DocumentWorker {
     id: ID!
     worker: Worker!
     document: Document!
-  }
+}
 
-  type Shift {
+type Shift {
     id: ID!
     start: String!
     end: String!
     profession: Profession!
-    isDeleted: Boolean
+    isDeleted: Boolean!
     facility: Facility!
-    worker: Worker!
-  }
+    worker: Worker
+}
 
-  type Query {
-    shifts: [Shift!]!
-  }
+type Query {
+    availableShifts(
+      startDate: String!
+      endDate: String!
+      workerId: ID
+    ): [Shift!]!
+}
+
+type Mutation {
+    claimShift(workerId: ID!, shiftId: ID!): Boolean!
+}
