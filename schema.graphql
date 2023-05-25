@@ -43,8 +43,8 @@
     end: String!
     profession: Profession!
     isDeleted: Boolean
-    facility: Facility
-    worker: Worker
+    facility: Facility!
+    worker: Worker!
   }
 
   type Query {

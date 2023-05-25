@@ -2,7 +2,7 @@
   "name": "hatchways-community",
   "version": "1.0.0",
   "description": "Story: As a worker, I want to get all available shifts that I'm eligible to work for.",
-  "main": "app.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
