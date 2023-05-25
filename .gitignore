@@ -7,6 +7,9 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 
+#package-lock not needed in the challenges
+package-lock.json
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
@@ -39,7 +42,8 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
+**/node_modules
+node_modules/**
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
@@ -128,3 +132,36 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+#Misc
+.idea/
+.vscode/
+node_modules/
+build/
+.DS_Store
+*.tgz
+my-app*
+template/src/__tests__/__snapshots__/
+lerna-debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/.changelog
+.npm/
+
+#Misc
+.idea/
+.vscode/
+node_modules/
+build/
+.DS_Store
+*.tgz
+my-app*
+template/src/__tests__/__snapshots__/
+lerna-debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/.changelog
+.npm/
+
