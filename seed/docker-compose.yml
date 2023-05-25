@@ -24,7 +24,7 @@ services:
       - cbh_thc_network
     environment:
       - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres
-    command: "./start.sh"
+    command: "bash start.sh"
 
 networks:
   cbh_thc_network:

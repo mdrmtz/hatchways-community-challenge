@@ -1,0 +1,30 @@
+{
+  "name": "hatchways-community",
+  "version": "1.0.0",
+  "description": "Story: As a worker, I want to get all available shifts that I'm eligible to work for.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hatchways-community/3ca46c7967bb4cc08c2b15bc5946b9d3.git"
+  },
+  "keywords": [
+    "Code",
+    "Challenge",
+    "API"
+  ],
+  "author": "Daniel Ramos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hatchways-community/3ca46c7967bb4cc08c2b15bc5946b9d3/issues"
+  },
+  "homepage": "https://github.com/hatchways-community/3ca46c7967bb4cc08c2b15bc5946b9d3#readme",
+  "dependencies": {
+    "@types/pg": "^8.10.1",
+    "apollo-server": "^3.12.0",
+    "graphql": "^16.6.0",
+    "pg": "^8.11.0"
+  }
+}

@@ -1,0 +1,52 @@
+
+  enum Profession {
+    CNA
+    LVN
+    RN
+  }
+
+  type Worker {
+    id: ID!
+    name: String!
+    isActive: Boolean!
+    profession: Profession!
+    documents: [Document!]!
+  }
+
+  type Facility {
+    id: ID!
+    name: String!
+    isActive: Boolean!
+  }
+
+  type Document {
+    id: ID!
+    name: String!
+    isActive: Boolean!
+  }
+
+  type FacilityRequirement {
+    id: ID!
+    facility: Facility!
+    document: Document!
+  }
+
+  type DocumentWorker {
+    id: ID!
+    worker: Worker!
+    document: Document!
+  }
+
+  type Shift {
+    id: ID!
+    start: String!
+    end: String!
+    profession: Profession!
+    isDeleted: Boolean
+    facility: Facility
+    worker: Worker
+  }
+
+  type Query {
+    shifts: [Shift!]!
+  }
